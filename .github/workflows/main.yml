@@ -27,9 +27,7 @@ jobs:
         uses:  CycloneDX/gh-node-module-generatebom@v1.0.0
         with:
           # cyclonedx-bom -o bom.xml
-           # url: 'http://localhost:8081'
-           # key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
-           #language: 'nodejs'
+          
            path: "./"
            output: ./bom.xml
      #Uploading  bom  
