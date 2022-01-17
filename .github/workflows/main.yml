@@ -31,7 +31,7 @@ jobs:
            # key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
            #language: 'nodejs'
            path: "./"
-           output: "./bom.xml"
+           output: ./bom.xml
      #Uploading  bom  
       - name: Upload BOM to Dependency-Track
         uses: DependencyTrack/gh-upload-sbom@v1.0.0
