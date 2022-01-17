@@ -14,10 +14,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+# See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -32,11 +30,10 @@ jobs:
            url: 'http://localhost:8081'
            key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
            language: 'nodejs'
-           node-version: ${{ matrix.node-version }}
-           projectname: 'ssabomupload'
-           projectversion: '1.0'
-        
+              
       
       # Show the risk score output 
       - name: Get the output time
         run: echo "The risk score of the project is ${{ steps.riskscoreFromDT.outputs.riskscore }}"
+        
+      - run: npm install
