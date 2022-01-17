@@ -26,9 +26,9 @@ jobs:
         uses:  Quobis/action-owasp-dependecy-track-check@main
         with:
           # cyclonedx-bom -o bom.xml
-           url: 'http://localhost:8081'
+           url: 'http://localhost:8080'
            key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
-           language: ''
+           language: 'nodeJs'
       
       # Show the risk score output -
       - name: Get the output time
