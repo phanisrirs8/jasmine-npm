@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -33,7 +33,8 @@ jobs:
            key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
            language: 'nodejs'
            node-version: ${{ matrix.node-version }}
-           
+           projectname: 'ssabomupload'
+           projectversion: '1.0'
         
       
       # Show the risk score output 
