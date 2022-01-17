@@ -23,14 +23,13 @@ jobs:
       # Generates a BoM and uploads it to OWASP Dependency Track
       - name: Generates BoM and upload to OWASP DTrack
         id: riskscoreFromDT
-        uses:  DependencyTrack/gh-upload-sbom@v1.0.0
+        uses:  CycloneDX/gh-node-module-generatebom@master
         with:
           # cyclonedx-bom -o bom.xml
-           serverhostname: 'http://localhost:8080'
-           apikey: ${{ secrets.Iz1HeSvPsylO4cDc23fdF5wNLM3WLxSf}}
-           projectname: 'ssabomupload'
-           projectversion: '1.0'
+           url: 'http://localhost:8080'
+           key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
+           language: 'nodejs'
       
-      # Show the risk score output -
+      # Show the risk score output 
       - name: Get the output time
         run: echo "The risk score of the project is ${{ steps.riskscoreFromDT.outputs.riskscore }}"
