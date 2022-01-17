@@ -23,13 +23,13 @@ jobs:
       # Generates a BoM and uploads it to OWASP Dependency Track
       - name: Generates BoM and upload to OWASP DTrack
         id: riskscoreFromDT
-        uses:  Quobis/action-owasp-dependecy-track-check@main
+        uses:  Quobis/action-owasp-dependency-track-check@main
         with:
           # cyclonedx-bom -o bom.xml
            url: 'http://localhost:8081'
            key: 'wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp'
            language: 'nodejs'
       
-      # Show the risk score output 
+      # Show the risk score output -
       - name: Get the output time
         run: echo "The risk score of the project is ${{ steps.riskscoreFromDT.outputs.riskscore }}"
