@@ -34,7 +34,7 @@ jobs:
       - name: Upload BOM to Dependency-Track
         uses: DependencyTrack/gh-upload-sbom@v1.0.0
         with:
-          serverhostname: 'www://localhost:8081'
+          serverhostname: 'www.localhost.com:8080'
           apikey: ${{ secrets.wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp }}
           projectname: 'ssabomupload'
           projectversion: '1.0'
