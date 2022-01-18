@@ -35,7 +35,7 @@ jobs:
         uses: DependencyTrack/gh-upload-sbom@v1.0.0
         with:
           serverhostname: 'http://127.0.0.1:8080'
-          apikey: ${{ secrets.wh2ETYrJv0xmwP6R9MzhxIZqtgvTTlIp }}
+          apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
           projectname: 'ssabomupload'
           projectversion: '1.0'
     
