@@ -36,10 +36,9 @@ jobs:
         with:
           serverhostname: 'http://127.0.0.1:8080'
           apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
-          projectname: 'ssabomupload'
-          projectversion: '1.0'
-    
-      
+          projectname: 'Example Project'
+          projectversion: 'master'
+          
       # Show the risk score output 
       - name: Get the output time
         run: echo "The risk score of the project is ${{ steps.riskscoreFromDT.outputs.riskscore }}"
