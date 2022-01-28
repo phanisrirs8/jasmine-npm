@@ -34,7 +34,7 @@ jobs:
       - name: Upload BOM to Dependency-Track
         uses: phanisrirs8/gh-upload-sbom@master
         with:
-          serverhostname: 'http://localhost:8080'
+          serverhostname: 'http://dependencytrackserver.com'
           apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
           projectname: 'Example Project'
           projectversion: 'master'
